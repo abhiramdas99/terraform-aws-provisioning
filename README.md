@@ -20,4 +20,41 @@ Step 2 : Review / recap - AWS Access key & permission setup
 
 Step 3 : Review / recap - Configuration of aws cli in local laptop 
 -----------------------------------------------------------------------
--> 
+open gitbash and execute the following command 
+-> aws configure   (enter)
+-> AWS Access Key ID : XXCXCXCXCXXCXC
+-> Secret Access Key : SDDDDDDDDDDDDDDDDSDSDDSDSD
+-> Default region name : ap-south-2
+-> Default output format [json] : json
+
+Step 4 : Create terraform script 
+-----------------------------------------------------------------------
+write following script and save in a folder 
+for my case c:\workspace\tarraform\iac-terraform-aws-basic-01\main.tf
+
+provider "aws" {
+   region ="ap-south-1"
+}
+
+resource "aws_instance" "intro"{
+   ami="ami-0283a57753b18025b"
+   instance_type=""
+   availability_zone="t2.micro"
+   key_name=""
+   tags={
+      Name="terrform_ec2_web"
+   }
+}
+
+
+Step 5 : Execute the script 
+------------------------------------------------------------------------
+to run below command you need to navigate to specific folder 
+for my case the folder is -  c:\workspace\tarraform\iac-terraform-aws-basic-01\
+-> terraform init 
+-> terraform validate
+-> terraform fmt  // its optional just formating the script 
+-> terraform plan
+-> terraform apply   and enter "yes" to final execution 
+
+
