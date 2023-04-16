@@ -40,7 +40,7 @@ resource "aws_instance" "intro"{
    ami="ami-0283a57753b18025b"
    instance_type=""
    availability_zone="t2.micro"
-   key_name=""
+   key_name="xxxxxxx"
    tags={
       Name="terrform_ec2_web"
    }
