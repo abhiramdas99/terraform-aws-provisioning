@@ -1,4 +1,4 @@
-# iac-terraform-aws-basic-01
+# iac-terraform-aws-example-01
 Infrastructure as  code  by terraform by aws cli - Create  Instance,
 execute from local laptop to aws infrastructure
 ===================================================================
