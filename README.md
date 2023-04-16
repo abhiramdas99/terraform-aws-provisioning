@@ -27,30 +27,10 @@ open gitbash and execute the following command
 -> Default region name : ap-south-2
 -> Default output format [json] : json
 
-Step 4 : Create terraform script 
+Step 4 : Run terraform script for lunch EC2
 -----------------------------------------------------------------------
-write following script and save in a folder 
-for my case c:\workspace\tarraform\iac-terraform-aws-basic-01\main.tf
-
-provider "aws" {
-   region ="ap-south-1"
-}
-
-resource "aws_instance" "intro"{
-   ami="ami-0283a57753b18025b"
-   instance_type=""
-   availability_zone="t2.micro"
-   key_name="xxxxxxx"
-   tags={
-      Name="terrform_ec2_web"
-   }
-}
-
-
-Step 5 : Execute the script 
-------------------------------------------------------------------------
-to run below command you need to navigate to specific folder 
-for my case the folder is -  c:\workspace\tarraform\iac-terraform-aws-basic-01\
+Run below command you need to navigate to specific folder 
+for my case the folder is -  c:\workspace\tarraform\iac-terraform-aws-basic-01\lunch-ec2\
 -> terraform init 
 -> terraform validate
 -> terraform fmt  // its optional just formating the script 
